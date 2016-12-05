@@ -54,7 +54,7 @@ backLine1 = new Layer
 	y: Align.center()#res * 327.26
 	x: Align.center()##res * 589.36
 	rotation: 30	
-	backgroundColor: "#A9015"
+	backgroundColor: "#A90157"
 backLine2 = new Layer
 	parent: LogoAvatarAlpha
 	width: res * 16.06

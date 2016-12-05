@@ -54,7 +54,7 @@ backLine1 = new Layer
 	y: Align.center()#res * 327.26
 	x: Align.center()##res * 589.36
 	rotation: 30	
-	backgroundColor: "#EE2323"
+	backgroundColor: "#A90157"
 backLine2 = new Layer
 	parent: LogoAvatarAlpha
 	width: res * 16.06
@@ -62,7 +62,7 @@ backLine2 = new Layer
 	y: Align.center()#res * 327.26
 	x: Align.center()##res * 589.36
 	rotation: -45	
-	backgroundColor: "#EE6423"
+	backgroundColor: "#C71B43"
 
 midRing = new Layer
 	parent: LogoAvatarAlpha
@@ -120,7 +120,7 @@ midLine2 = new Layer
 	y: Align.center()#res * 327.26
 	x: Align.center()##res * 589.36
 	rotation: 45	
-	backgroundColor: "#EE6423"
+	backgroundColor: "#C71B43"
 
 frontCircle = new Layer
 	parent: LogoAvatarAlpha
@@ -129,7 +129,7 @@ frontCircle = new Layer
 	borderRadius: res * 361.42	
 	x: Align.center() #res * 535.81
 	y: Align.center() #res * 358.97
-	backgroundColor: "#EE8D23"
+	backgroundColor: "#A90157"
 	
 Avatar = new Layer
 	parent: LogoAvatarAlpha

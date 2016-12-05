@@ -112,7 +112,7 @@ midLine1 = new Layer
 	y: Align.center()#res * 327.26
 	x: Align.center()##res * 589.36
 	rotation: -30	
-	backgroundColor: "#EE2323"
+	backgroundColor: "#A90157"
 midLine2 = new Layer
 	parent: LogoAvatarAlpha
 	width: res * 16.06

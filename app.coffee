@@ -290,7 +290,13 @@ aboutButton.style =
 	"fontSize"	: (24 * res) + "pt"
 	"lineHeight" : aboutButton.height + 2 + "px"
 	"textAlign" : "center"
-	
+
+aboutBuffer = new Layer
+	parent: aboutArea.content
+	width: aboutArea.width
+	height: 200 * res	
+	y: aboutMeContent.height + aboutMeContent.y	
+	backgroundColor: "white"
 resumeHeader = new Layer
 	parent: resumeArea.content
 	y: 80 * res

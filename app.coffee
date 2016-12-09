@@ -14,8 +14,8 @@ res = (Screen.width/1440)
 #TextStyles
 sideBarText = 
 	"fontFamily" : "Josefin Sans"
-	"fontSize" : (28 * res) + "pt"
-	"lineHeight" : (44 * res) + "px"
+	"fontSize" : 14 + "pt"
+	"lineHeight" : 28 + "px"
 	"color" : "#C71B43"
 	
 sideBarBG = new Layer
@@ -150,32 +150,32 @@ LogoAvatar = new Layer
 about = new Layer
 	parent: sideBarBG
 	x: sideBarBG.width * 0.2
-	y: (sideBarBG.width * 0.6) + (57 * res) + ((sideBarBG.width * 0.6/212) * 94) + (40 * res)
 	width: sideBarBG.width * 0.6
-	height: 38 * res
+	height: 28
 	backgroundColor: null
 	style: sideBarText
 	html: "About"
+	y: 40 + (sideBarBG.width * 0.6) + (57 * res) + (sideBarBG.width * 0.6/212) * 94
 
 projects = new Layer
 	parent: sideBarBG
 	x: sideBarBG.width * 0.2
-	y: about.height + about.y + (16 * res)
 	width: sideBarBG.width * 0.6
-	height: 38 * res
+	height: 28
 	backgroundColor: null
 	style: sideBarText
 	html: "Projects"
+	y: about.y + about.height + 2
 
 resume = new Layer
 	parent: sideBarBG
 	x: sideBarBG.width * 0.2
-	y: projects.height + projects.y + (16 * res)
 	width: sideBarBG.width * 0.6
-	height: 38 * res
+	height: 28
 	backgroundColor: null
 	style: sideBarText
 	html: "Resume"	
+	y: projects.y + projects.height + 2
 
 #scroll Components
 contentArea = new ScrollComponent
@@ -195,6 +195,15 @@ aboutArea = new ScrollComponent
 	scrollHorizontal: false
 
 aboutArea.placeBehind(sideBarBG)
+
+resumeArea = new ScrollComponent
+	width: Screen.width - sideBarBG.width
+	height: 0
+	x: sideBarBG.width - (16 * res)
+	backgroundColor: "white"
+	scrollHorizontal: false
+
+resumeArea.placeBehind(sideBarBG)
 
 disneyArea = new ScrollComponent
 	width: Screen.width - sideBarBG.width
@@ -249,6 +258,8 @@ rockoonArea = new ScrollComponent
 	scrollHorizontal: false
 
 rockoonArea.placeBehind(sideBarBG)
+
+#About Me & Resume Content
 aboutMeHeader = new Layer
 	parent: aboutArea.content
 	width: (498 * res) / 2
@@ -259,17 +270,49 @@ aboutMeHeader = new Layer
 
 aboutMeContent = new Layer
 	parent: aboutArea.content
-	width: (1076 * res) * 0.9
-	height: (807 * res) * 0.9
-	x: Align.center()
+	width: (3036 * res) * (1/3)
+	height: (1719 * res) * (1/3)
+	x: 64 * res
 	y: 274 * res
 	image: "images/aboutMeContent.png"
+
+aboutButton = new Layer
+	parent: aboutMeContent
+	width: 348 * res
+	height: 64 * res 
+	borderRadius: 8 * res
+	backgroundColor: "#A90157"
+	html: "Let's Get Connected"
+	x: Align.right()
+	y: Align.bottom()
+aboutButton.style = 
+	"fontFamily" : "Josefin Sans"
+	"fontSize"	: (24 * res) + "pt"
+	"lineHeight" : aboutButton.height + 2 + "px"
+	"textAlign" : "center"
+	
+resumeHeader = new Layer
+	parent: resumeArea.content
+	y: 80 * res
+	x: Align.center()
+	width: (591 * res) * (1/3)
+	height: (276 * res) * (1/3)
+	image: "images/resumeHeader.png"
+		
+resumeContent = new Layer
+	parent: resumeArea.content
+	y: resumeHeader.height + (192 * res)
+	x: 64 * res
+	width: (3024 * res) * (1/3)
+	height: (12027 * res) * (1/3)
+	image: "images/resumeContent.png"
+
 
 #Hero Images	
 disneyHero = new Layer
 	parent: contentArea.content
-	width: 950 * res
-	height: 300 * res 
+	width: (950 * res) * (7/8)
+	height: (300 * res) * (7/8)
 	x: Align.center()
 	image: "images/Group 38.png"
 	y: 84
@@ -277,47 +320,47 @@ disneyHero = new Layer
 	
 mageHero = new Layer
 	parent: contentArea.content
-	width: 950 * res
-	height: 300 * res 
+	width: (950 * res) * (7/8)
+	height: (300 * res) * (7/8)
 	x: Align.center()
 	image: "images/Group 39.png"
-	y: 84 + (300 * res)
+	y: 84 + ((300 * res) * (7/8))
 	opacity: 0
 	
 runeSafeHero = new Layer
 	parent: contentArea.content
-	width: 950 * res
-	height: 300 * res 
+	width: (950 * res) * (7/8)
+	height: (300 * res) * (7/8)
 	x: Align.center()
 	image: "images/Group 40.png"
-	y: 84 + (600 * res)
+	y: 84 + ((600 * res) * (7/8))
 	opacity: 0
 	
 printLargeHero = new Layer
 	parent: contentArea.content
-	width: 950 * res
-	height: 300 * res 
+	width: (950 * res) * (7/8)
+	height: (300 * res) * (7/8)
 	x: Align.center()
 	image: "images/Group 41.png"
-	y: 84 + (900 * res)
+	y: 84 + ((900 * res) * (7/8))
 	opacity: 0
 	
 printSmallHero = new Layer
 	parent: contentArea.content
-	width: 950 * res
-	height: 300 * res 
+	width: (950 * res) * (7/8)
+	height: (300 * res) * (7/8)
 	x: Align.center()
 	image: "images/Group 42.png"
-	y: 84 + (1200 * res)
+	y: 84 + ((1200 * res) * (7/8))
 	opacity: 0
 	
 rockoonHero = new Layer
 	parent: contentArea.content
-	width: 950 * res
-	height: 300 * res 
+	width: (950 * res) * (7/8)
+	height: (300 * res) * (7/8)
 	x: Align.center()
 	image: "images/Group 43.png"
-	y: 84 + (1500 * res)
+	y: 84 + ((1500 * res) * (7/8))
 	opacity: 0
 
 
@@ -691,11 +734,15 @@ Avatar.onClick ->
 					time: 0.6
 					curve: "ease-in-out"
 about.onClick ->
-
 	aboutArea.bringToFront()
 	aboutArea.placeBehind(sideBarBG)
 	aboutArea.height = Screen.height
-				
+
+resume.onClick ->
+	resumeArea.bringToFront()
+	resumeArea.placeBehind(sideBarBG)
+	resumeArea.height = Screen.height
+					
 projects.onClick ->
 	contentArea.bringToFront()
 	contentArea.placeBehind(sideBarBG)
@@ -706,5 +753,6 @@ projects.onClick ->
 				opacity: 1
 			time: 0.6
 			curve: "ease-in-out"
+
 
 

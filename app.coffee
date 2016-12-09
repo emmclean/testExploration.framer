@@ -302,9 +302,9 @@ resumeHeader = new Layer
 resumeContent = new Layer
 	parent: resumeArea.content
 	y: resumeHeader.height + (192 * res)
-	x: 64 * res
-	width: (3024 * res) * (1/3)
-	height: (12027 * res) * (1/3)
+	x: Align.center()
+	width: (3024 * res) * (1/3) * (0.8)
+	height: (12027 * res) * (1/3) * (0.8)
 	image: "images/resumeContent.png"
 
 

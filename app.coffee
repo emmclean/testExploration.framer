@@ -297,6 +297,7 @@ aboutBuffer = new Layer
 	height: 200 * res	
 	y: aboutMeContent.height + aboutMeContent.y	
 	backgroundColor: "white"
+	
 resumeHeader = new Layer
 	parent: resumeArea.content
 	y: 80 * res
@@ -744,6 +745,8 @@ about.onClick ->
 	aboutArea.placeBehind(sideBarBG)
 	aboutArea.height = Screen.height
 
+aboutButton.onTouchStart ->
+	window.open("https://www.linkedin.com/in/emmclean")
 resume.onClick ->
 	resumeArea.bringToFront()
 	resumeArea.placeBehind(sideBarBG)
